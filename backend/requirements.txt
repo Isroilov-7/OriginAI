@@ -1,0 +1,46 @@
+# AntiplagiatPRO — O'rnatish ro'yxati
+# pip install -r requirements.txt
+
+# ── MAJBURIY ─────────────────────────────────────────────
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+python-multipart>=0.0.9
+pydantic>=2.0.0
+numpy>=1.24.0
+
+# ── AI DETEKTOR v2.0 (27 feature + XGBoost ensemble) ────
+scikit-learn>=1.3.0
+xgboost>=2.0.0
+
+# ── FAYL FORMATLARI ──────────────────────────────────────
+PyPDF2>=3.0.0
+python-docx>=1.0.0
+
+# ── PDF HISOBOT ──────────────────────────────────────────
+reportlab>=4.0.0
+
+# ── TIL VA MORFOLOGIYA ──────────────────────────────────
+langdetect>=1.0.9
+pymorphy3>=2.0.0
+
+# ── XAVFSIZLIK ──────────────────────────────────────────
+bcrypt>=4.0.0
+python-dotenv>=1.0.0
+
+# ── RATE LIMITING ───────────────────────────────────────
+slowapi>=0.1.9
+
+# ── EMAIL ────────────────────────────────────────────────
+aiosmtplib>=3.0.0
+
+# ── WEB SEARCH (internet orqali plagiat tekshirish) ─────
+httpx>=0.27.0
+
+# ── IXTIYORIY: SEMANTIK TAHLIL (parafraz + tarjima) ────
+# Model hajmi: ~1.8 GB
+# sentence-transformers>=2.2.0
+# torch>=2.0.0
+
+# ── IXTIYORIY: TRANSFORMER AI DETEKTOR (+15% aniqlik) ──
+# transformers>=4.40.0
+# torch>=2.0.0
