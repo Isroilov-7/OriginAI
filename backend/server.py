@@ -1572,7 +1572,7 @@ class ChangePasswordReq(BaseModel):
 
 # Rate limit handler va state
 #app.state.limiter = Limiter
-app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+#app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
