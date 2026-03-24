@@ -1571,7 +1571,7 @@ class ChangePasswordReq(BaseModel):
 # ─── FASTAPI ILOVASI ──────────────────────────────────────────────────────────
 
 # Rate limit handler va state
-app.state.limiter = Limiter
+#app.state.limiter = Limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 @asynccontextmanager
