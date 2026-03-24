@@ -654,8 +654,8 @@ footer{background:var(--ink);color:rgba(255,255,255,.6);padding:48px 24px 32px}
 </div>
 
 <script>
-const API = (location.hostname==='localhost'||location.hostname==='127.0.0.1')
-  ? 'http://localhost:8000' : '';
+<script>
+const API = 'https://originai.onrender.com';
 
 let USER  = JSON.parse(localStorage.getItem('ap_user')||'null');
 let TOKEN = localStorage.getItem('ap_token')||'';
@@ -759,7 +759,6 @@ async function runCheck({type,text,file}) {
   const loader=document.getElementById('loader');
   const result=document.getElementById('result');
   loader.style.display='flex'; result.style.display='none';
-  document.getElementById('skeleton-result').style.display='none';
   document.getElementById('check-btn').disabled=true;
   document.getElementById('file-btn').disabled=true;
   try {
@@ -875,7 +874,7 @@ function showResult(data) {
     if (semMatches.length) {
       semList.innerHTML = semMatches.slice(0,5).map(m => {
         const typeLabel = m.type==='translation' ? '🌐 Tarjima' :
-                          m.type==='paraphrase'  ? '↔️ Parafraz' : '≈ O'xshash';
+                          m.type==='paraphrase'  ? '↔️ Parafraz' : '≈ O\'xshash';
         const typeClass = m.type==='translation' ? 'bg-p' :
                           m.type==='paraphrase'  ? 'bg-r' : 'bg-a';
         return `<div style="background:var(--bg);border:1.5px solid var(--border);
@@ -898,7 +897,7 @@ function showResult(data) {
   } else if (sem.labse_available === false) {
     // LaBSE o'rnatilmagan — xabar
     semSec.style.display = 'block';
-    semBadges.innerHTML = '<span class="sc-badge bg-a" title="pip install sentence-transformers torch">⚡ Semantik tahlil o'chirilgan (sentence-transformers kerak)</span>';
+    semBadges.innerHTML = '<span class="sc-badge bg-a" title="pip install sentence-transformers torch">⚡ Semantik tahlil o\'chirilgan (sentence-transformers kerak)</span>';
     semList.innerHTML = '';
   } else {
     semSec.style.display = 'none';
@@ -1272,4 +1271,5 @@ document.getElementById('overlay').addEventListener('click',e=>{
 })();
 </script>
 </body>
+</html>
 </html>
